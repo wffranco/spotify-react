@@ -9,7 +9,7 @@ export const reducers = {
   'token/save'({ token_type, access_token, reload = false }) {
     const token = `${token_type} ${access_token}`;
     localStorage.setItem(storage, token);
-    if (reload) window.location = `${window.location.origin}/${window.location.hash}`;
+    if (reload) window.location = `${base_url}${window.location.hash}`;
     return token;
   },
   'token/remove'() {
