@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useSelector, useActions } from '../../redux/store';
 import { useHistory } from '../../router';
 
 import Icon from '../icon';
 
 function Search() {
-  const [search, setSearch] = useState('');
+  const search = useSelector(store => store.search);
+  const { setSearch } = useActions(['setSearch']);
   const history = useHistory();
-  // const { searchMusic } = useActions(['searchMusic']);
 
   function submit(e) {
     if (e) e.preventDefault();

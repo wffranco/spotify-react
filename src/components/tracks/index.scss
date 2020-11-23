@@ -1,0 +1,14 @@
+.card-deck {
+  .card.track {
+    margin: .5em;
+
+    @media (min-width: 320px) {
+      min-width: 250px;
+    }
+  }
+}
+
+.card-title {
+  margin-bottom: .5rem;
+  padding-bottom: .25em;
+}
