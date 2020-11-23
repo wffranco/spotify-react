@@ -21,7 +21,19 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".jsx",
+            ".js",
+            ".tsx",
+            ".ts"
+          ]
+        }
+      }
+    }
   },
   "browserslist": {
     "production": [
