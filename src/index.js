@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './index.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import App from './App';
+import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
-import store from './redux/store';
+import App from './App';
+
+import './index.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+require('jquery/dist/jquery.slim');
+require('bootstrap');
 
 ReactDOM.render(
   <React.StrictMode>
