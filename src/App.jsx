@@ -1,9 +1,18 @@
+import { useEffect } from 'react';
 import { Router } from './router';
+import { useActions } from './redux/store';
 
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const { validateCode, fetchUser } = useActions(['validateCode', 'fetchUser']);
+
+  useEffect(() => {
+    // Initialize some data
+    validateCode().finally(() => fetchUser());
+  });
+
   return (
     <Router>
       <div className="App">
