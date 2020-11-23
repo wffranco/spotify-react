@@ -1,8 +1,6 @@
 
 export default function getPages({glue = '...', ...options}) {
   const groups = pageGroups(options);
-  console.log(options);
-  console.log({groups});
   return groups.reduce((result, group) => {
     if (!(result instanceof Array)) return group;
     return [...result, glue, ...group];

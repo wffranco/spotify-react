@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 
 import music from './music';
+import search from './search';
 import token from './token';
 import user from './user';
 
 const reducers = {
   music,
+  search,
   token,
   user,
 };

@@ -53,10 +53,5 @@ export const actions = {
   login_url: () => `${auth_url}?client_id=${client_id}&response_type=code&redirect_uri=${base_url}`,
 };
 
-const token = {
-  init,
-  reducers,
-  actions,
-};
-
+const token = { init, reducers, actions };
 export default token;

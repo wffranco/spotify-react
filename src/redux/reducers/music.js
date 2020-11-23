@@ -46,7 +46,9 @@ const music = {
       if (next > 100) next = null;
       let pages = Math.ceil(total/limit);
       if (pages > 100) pages = 100;
-      return { query, current, limit, offset, previous, next, pages, total };
+      const data = { query, current, limit, offset, previous, next, pages, total };
+      // console.log('pagination:', data);
+      return data;
     },
   },
 };
