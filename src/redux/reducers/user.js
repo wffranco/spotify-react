@@ -26,6 +26,10 @@ const user = {
         startedFirst = true;
 
         if (loading) return;
+        if (!state.token) {
+          dispatch('user/guest');
+          return;
+        }
         if (!state.token || (state.user && !force)) return;
 
         loading = true;

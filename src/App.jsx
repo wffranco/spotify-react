@@ -2,8 +2,10 @@ import { useEffect } from 'react';
 import { Router } from './router';
 import { useActions } from './redux/store';
 
+import Header from './components/header';
+
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   const { validateCode, fetchUser } = useActions(['validateCode', 'fetchUser']);
@@ -16,7 +18,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        <Header />
+        <header className="App-header pt-5">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
